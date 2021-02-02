@@ -11,7 +11,7 @@
     <groupId>com.interviewdot</groupId>
     <artifactId>WeatherApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>WeatherApp</name>-
+    <name>WeatherApp</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
