@@ -18,3 +18,5 @@ workflows:
     jobs:
       - neurio-ecs-orb/code-analysis:
           name: Static Code Analysis
+          context:
+            - aws-us-east-1
