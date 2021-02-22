@@ -8,10 +8,10 @@
         <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.interviewdot</groupId>
-    <artifactId>WeatherApp</artifactId>
+    <groupId>com.neurio</groupId>
+    <artifactId>weatherApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>WeatherApp</name>
+    <name>weatherApp</name>
     <description>Demo project for Spring Boot</description>
 
 
@@ -20,9 +20,6 @@
         <java.version>1.8</java.version>
         <swagger.version>2.9.2</swagger.version>
         <jetcache.version>2.5.9</jetcache.version>
-        <sonar.projectKey>neurio_weather-api</sonar.projectKey>
-        <sonar.organization>neurio-1</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -92,7 +89,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+            </plugin>
         </plugins>
+
     </build>
 
 </project>
