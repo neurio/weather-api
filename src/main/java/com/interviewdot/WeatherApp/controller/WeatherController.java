@@ -30,9 +30,4 @@ public class WeatherController {
         return weatherService.weatherForecastAverage(city);
     }
 
-    @ApiOperation("Return a JSON object that gives the weather minus.")
-    @GetMapping(value = "/forecast", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> weatherForecastMinus(@ApiParam("City's name") @RequestParam(required = true) String city) {
-        return weatherService.weatherForecastAverage(city);
-    }
 }
