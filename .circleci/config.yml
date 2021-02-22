@@ -1,5 +1,6 @@
 version: 2.1
-
+orbs:
+  neurio-ecs-orb: cedab734-09b7-11eb-adc1-0242ac120002/neurio-ecs-orb@dev:alpha
 jobs:
   build:
     docker:
@@ -11,7 +12,8 @@ jobs:
           command: mvn verify sonar:sonar
 
 workflows:
-  main:
+  version: 2.1
+  workflow:
     jobs:
-      - build:
-          context: SonarCloud
+      - neurio-ecs-orb/code-analysis:
+          name: Static Code Analysis
