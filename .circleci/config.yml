@@ -1,15 +1,15 @@
 version: 2.1
 orbs:
   neurio-ecs-orb: cedab734-09b7-11eb-adc1-0242ac120002/neurio-ecs-orb@dev:alpha
-#jobs:
-#  build:
-#    docker:
-#      - image: 'circleci/openjdk:11-jdk'
-#    steps:
-#      - checkout
-#      - run:
-#          name: Analyze on SonarCloud
-#          command: mvn verify sonar:sonar
+jobs:
+  build:
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Analyze on SonarCloud
+          command: mvn verify sonar:sonar
 
 
 workflows:
@@ -20,3 +20,4 @@ workflows:
           name: Static Code Analysis
           context:
             - aws-us-east-1
+      - build
